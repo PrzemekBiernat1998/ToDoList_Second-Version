@@ -1,0 +1,21 @@
+.section {
+    max-width: 750px;
+    background-color: white;
+    border-radius: 20px;
+    margin: auto;
+    margin-bottom: 20px;
+    
+    border: solid 1px teal;
+  }
+  
+  
+  .section--top {
+    max-width: 750px;
+    border-radius: 20px;
+    margin: 0px auto;
+  }
+  
+  .section__header{
+    border-bottom: 2px solid teal;
+    padding-bottom: 10px;
+  }

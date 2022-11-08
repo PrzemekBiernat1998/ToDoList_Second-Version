@@ -1,0 +1,26 @@
+html {
+    box-sizing: border-box;
+  }
+  
+  *,
+  ::after,
+  ::before {
+    box-sizing: inherit;
+  }
+  
+  body {
+    font-family: "Lato", sans-serif;
+  }
+  
+  .body {
+    background-color: rgb(181, 210, 223);
+    padding: 20px;
+  }
+  
+  .header {
+    background-color: teal;
+    color: white;
+    border: 1px solid black;
+    border-radius: 20px;
+    padding: 10px;
+  }

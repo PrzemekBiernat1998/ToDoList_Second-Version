@@ -1,0 +1,41 @@
+.form {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 20px;
+  }
+  
+  @media (max-width: 767px) {
+    .form {
+      display: flex;
+      flex-direction: column;
+      margin-right: 10px;
+    }
+  }
+  
+  .form__input {
+    flex-grow: 1;
+    padding: 5px;
+    color: black;
+    margin: 10px;
+  }
+  
+  @media (max-width: 767px) {
+    .form__input {
+      width: 100%;
+    }
+  }
+  
+  .form__button {
+    padding: 5px 20px;
+    background-color: teal;
+    color: white;
+    margin: 10px;
+    cursor: pointer;
+  }
+  
+  @media (max-width: 767px) {
+    .form__button {
+        width: 100%;
+    }
+  }

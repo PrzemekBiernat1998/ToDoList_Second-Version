@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ToDoList Second Version</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+      integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    
+    <link href="style/style.css" rel="stylesheet" />
+    <link href="style/section.css" rel="stylesheet" />
+    <link href="style/taskList.css" rel="stylesheet" />
+    <link href="style/form.css" rel="stylesheet" />
+    <script defer src="script/script.js"></script>
+  </head>
+
+  <body class="body">
+    <section class="section--top">
+      <h1 class="header">Lista zadań</h1>
+    </section>
+    <section class="section">
+      <h2 class="section__header">Dodaj nowe zadanie</h2>
+      <form class="form js-form">
+        <input
+          type="text"
+          placeholder="Co masz do zrobienia?"
+          class="form__input js-newTask"
+          autofocus
+        />
+        <button class="form__button js-button">Dodaj zadanie</button>
+      </form>
+    </section>
+    <section class="section">
+      <h2 class="section__header">Lista do zrobienia</h2>
+      <ul class="list js-tasks"></ul>
+    </section>
+  </body>
+</html>
