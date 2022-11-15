@@ -27,7 +27,12 @@
     };
 
     const toggleAllTasksDone = () =>{
-
+        tasks = tasks.map((tasks) =>({
+            ...tasks, 
+            done :true,
+        }
+        ));
+        render();
     };
 
     const clearInput = () => {
@@ -44,8 +49,18 @@
             });
         });
     };
+     
+    cosnt bidnButtonEvents = () => {
+        const setAllTaskDoneEvents = document.querySelector("js-setAllTaskDone");
 
-        const bindToggleDoneButtons = document.querySelectorAll(".js-done");
+        if (setAllTaskDoneEvents){
+            setAllTaskDoneEvents.addEventListener("click", () => {
+                setAllTaskDone();
+            });
+        };
+    };
+
+    const bindToggleDoneButtons = document.querySelectorAll(".js-done");
 
         toggleDoneButtons.forEach((toggleDoneButton, index) => {
             toggleDoneButton.addEventListener("click", () => {
@@ -81,6 +96,7 @@
 
         bindRemoveEvents();
         bindToggleDoneEvents();
+        bidnButtonEvents();
     };
 
     const onFormSubmit = (event) => {
