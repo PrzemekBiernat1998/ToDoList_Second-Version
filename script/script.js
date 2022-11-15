@@ -1,17 +1,21 @@
 {
-    const tasks = [
-    ];
+    let tasks = [];
+    let hideTaskDone = false;
 
     const addNewTask = (newTaskContent) => {
-        tasks.push({
-            content: newTaskContent,
-        });
+        tasks = [
+            ...tasks,
+            {content : newTaskContent},
+        ];
 
         render();
     };
 
-    const removeTask = (taskIndex) => {
-        tasks.splice(taskIndex, 1);
+    const removeTask = (index) => {
+        tasks = [
+            ...tasks.slice(0, index),
+            ...tasks.slice(index + 1),
+        ]
 
         render();
     };
@@ -22,12 +26,16 @@
         render();
     };
 
+    const toggleAllTasksDone = () =>{
+
+    };
+
     const clearInput = () => {
         const clearInput = document.querySelector(".js-newTask");
         clearInput.value = "";
     };
 
-    const bindEvents = () => {
+    const bindRemoveEvents = () => {
         const removeButtons = document.querySelectorAll(".js-remove");
 
         removeButtons.forEach((removeButton, index) => {
@@ -35,8 +43,9 @@
                 removeTask(index);
             });
         });
+    };
 
-        const toggleDoneButtons = document.querySelectorAll(".js-done");
+        const bindToggleDoneButtons = document.querySelectorAll(".js-done");
 
         toggleDoneButtons.forEach((toggleDoneButton, index) => {
             toggleDoneButton.addEventListener("click", () => {
@@ -45,7 +54,7 @@
         });
     };
 
-    const render = () => {
+    const renderTasks = () => {
         let htmlString = "";
 
         for (const task of tasks) {
@@ -61,7 +70,17 @@
 
         document.querySelector(".js-tasks").innerHTML = htmlString;
 
-        bindEvents();
+    };
+    const renderButtons = () => {
+
+    };
+
+    const render = () => {
+        renderTasks();
+        renderButtons();
+
+        bindRemoveEvents();
+        bindToggleDoneEvents();
     };
 
     const onFormSubmit = (event) => {
@@ -89,4 +108,4 @@
     };
 
     init();
-}
+};
