@@ -9,9 +9,15 @@
     font-size: 15px;
     transition: 0.5s;
     cursor: pointer;
+    border: solid 1px teal;
+    border-radius: 10px;
   }
-
-  .buttons__button:disabled {
+  
+  .buttons__button:hover {
+    color: hsl(180, 94%, 25%);
+  }
+  
+  .buttons__button.buttons__button:disabled {
     color: #ddd;
     cursor: default;
   }
