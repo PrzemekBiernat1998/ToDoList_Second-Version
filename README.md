@@ -9,4 +9,13 @@ This site contains to-do app.
 
 ## Description
 
-The application will help you organize your day. Thanks to this application you will not forget to do you have to do
+The application will help you organize your day. Thanks to this application you will not forget to do you have to do.
+
+## 🛠Technologies
+- HTML
+- CSS
+- JavaScript
+- Flex
+- Grid
+- BEM
+- Markdown
