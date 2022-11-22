@@ -4,20 +4,27 @@
     list-style-type: none;
   }
   
-  ul li:hover {
-    background-color: rgb(190, 190, 190);
-  }
-  
   .list__task {
     display: grid;
     grid-template-columns: auto 1fr auto;
+    grid-gap: 10px;
+    padding: 10px;
+    text-decoration: none;
     align-items: center;
-    margin: 10px;
-    padding: 5px;
+    border-bottom: 1px solid #eee;
+    word-break: break-all;
   }
   
-  .list__taskItem{
+  list__task--hidden {
+    display: none;
+  }
+  
+  .list__taskItem {
     padding-left: 10px;
+  }
+  
+  .list__taskItem:hover {
+    background-color: rgb(190, 190, 190);
   }
   
   .list__taskItem--done {
@@ -27,82 +34,38 @@
   .list__taskButton {
     width: 30px;
     height: 30px;
-    background-color:.list {
-        width: 100%;
-        padding: 10px;
-        list-style-type: none;
-      }
-      
-      .list__task {
-        display: grid;
-        grid-template-columns: auto 1fr auto;
-        grid-gap: 10px;
-        padding: 10px;
-        text-decoration: none;
-        align-items: center;
-        border-bottom: 1px solid #eee;
-        word-break: break-all;
-      }
-      
-      list__task--hidden {
-        display: none;
-      }
-      
-      .list__taskItem {
-        padding-left: 10px;
-      }
-      
-      .list__taskItem:hover {
-        background-color: rgb(190, 190, 190);
-      }
-      
-      .list__taskItem--done {
-        text-decoration: line-through;
-      }
-      
-      .list__taskButton {
-        width: 30px;
-        height: 30px;
-        background-color: #1a7a1d;
-        border: none;
-        cursor: pointer;
-        transition: 1s;
-      }
-      
-      .list__taskButton:hover {
-        background-color: hsl(122, 65%, 34%);
-      }
-      
-      .list__taskButton--remove {
-        background-color: rgb(238, 43, 43);
-        justify-self: flex-end;
-      }
-      
-      .list__taskButton--remove:hover {
-        background-color: hsl(0, 85%, 65%);
-      }
-      
-      .tasks__list {
-        display: grid;
-        grid-template-columns: auto 1fr auto;
-        grid-gap: 10px;
-        padding: 10px;
-        text-decoration: none;
-        align-items: center;
-        border-bottom: 1px solid #eee;
-        word-break: break-all;
-      }
-      
-      .tasks__list--hidden {
-        display: none;
-      } #1a7b1e;
+    background-color: #1a7a1d;
     border: none;
     cursor: pointer;
+    transition: 1s;
+  }
+  
+  .list__taskButton:hover {
+    background-color: hsl(122, 65%, 34%);
   }
   
   .list__taskButton--remove {
     background-color: rgb(238, 43, 43);
     justify-self: flex-end;
+  }
+  
+  .list__taskButton--remove:hover {
+    background-color: hsl(0, 85%, 65%);
+  }
+  
+  .tasks__list {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    grid-gap: 10px;
+    padding: 10px;
+    text-decoration: none;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+    word-break: break-all;
+  }
+  
+  .tasks__list--hidden {
+    display: none;
   }
   .list__item{
     border: solid 2px teal;
